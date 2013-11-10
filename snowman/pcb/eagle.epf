@@ -1,6 +1,6 @@
 [Eagle]
 Version="05 12 00"
-Platform="Windows"
+Platform="Mac OS X"
 Serial="6F08A96C5D-LS-WLM-1CP"
 Globals="Globals"
 Desktop="Desktop"
@@ -51,7 +51,7 @@ Sheet=1
 
 [Win_2]
 Type="Board Editor"
-Loc="0 22 1919 993"
+Loc="0 22 1919 1113"
 State=1
 Number=2
 File="snowman-r1.brd"
@@ -90,7 +90,7 @@ Layer=16
 
 [Win_3]
 Type="Control Panel"
-Loc="0 0 1919 1129"
+Loc="0 22 1919 1112"
 State=1
 Number=0
 

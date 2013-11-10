@@ -1,6 +1,6 @@
 [Eagle]
 Version="05 12 00"
-Platform="Windows"
+Platform="Mac OS X"
 Serial="6F08A96C5D-LS-WLM-1CP"
 Globals="Globals"
 Desktop="Desktop"
@@ -10,7 +10,7 @@ AutoSaveProject=1
 
 [Win_1]
 Type="Schematic Editor"
-Loc="0 22 1919 992"
+Loc="0 22 1919 1112"
 State=1
 Number=1
 File="snowflake-r2.sch"
@@ -51,7 +51,7 @@ Sheet=1
 
 [Win_2]
 Type="Library Editor"
-Loc="130 130 729 529"
+Loc="0 22 1919 1112"
 State=1
 Number=3
 File="C:/Projects/xmas2013/artwork.lbr"
@@ -87,11 +87,10 @@ ArcDirection=0
 AddLevel=2
 PadsSameType=0
 Layer=21
-Package="SNOWFLAKE"
 
 [Win_3]
 Type="Board Editor"
-Loc="0 22 1919 992"
+Loc="0 22 1919 1112"
 State=1
 Number=2
 File="snowflake-r2.brd"
@@ -130,7 +129,7 @@ Layer=1
 
 [Win_4]
 Type="Control Panel"
-Loc="0 0 1919 1129"
+Loc="0 22 1919 1112"
 State=1
 Number=0
 

@@ -1,5 +1,5 @@
 //MPD-File
-#ifndef(pack_C1) #declare global_pack_C1=yes; object {CAP_DIS_CERAMIC_25MM_50MM("100n",)translate<0,-0,0> rotate<0,0.000000,0>rotate<0,-180.000000,0> rotate<0,0,180> translate<3.810000,-1.500000,13.970000>}#end		//ceramic disc capacitator C1 100n C025-025X050
+#ifndef(pack_C1) #declare global_pack_C1=yes; object {CAP_DIS_CERAMIC_50MM_76MM("100n",)translate<0,-0,0> rotate<0,0.000000,0>rotate<0,-180.000000,0> rotate<0,0,180> translate<5.080000,-1.500000,13.970000>}#end		//ceramic disc capacitator C1 100n C050-025X075
 #ifndef(pack_IC1) #declare global_pack_IC1=yes; object {IC_DIS_DIP8("TINY138P3","ATMEL",)translate<0,-0,0> rotate<0,0.000000,0>rotate<0,-270.000000,0> rotate<0,0,180> translate<6.350000,-1.500000,6.350000>translate<0,-3.000000,0> }#end		//DIP8 IC1 TINY138P3 DIL08
 #ifndef(pack_IC1) object{SOCKET_DIP8()rotate<0,-270.000000,0> rotate<0,0,180> translate<6.350000,-1.500000,6.350000>}#end					//IC-Sockel 8Pin IC1 TINY138P3
 #ifndef(pack_LED1) #declare global_pack_LED1=yes; object {DIODE_DIS_LED_3MM(Red,0.500000,0.000000,)translate<0,0,0> rotate<0,0.000000,0>rotate<0,0.000000,0> rotate<0,0,0> translate<24.130000,0.000000,29.210000>}#end		//Diskrete 3MM LED LED1  LED3MM
