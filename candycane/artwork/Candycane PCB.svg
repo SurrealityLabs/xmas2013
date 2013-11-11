@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="175.5"
+   height="175.5"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.2 r9819"
+   sodipodi:docname="Candycane PCB.svg">
+  <defs
+     id="defs4">
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect3875"
+       is_visible="true"
+       pattern="m 318.09649,-42.584504 33.95144,0 0,7e-6 0,33.9514932 -1e-5,0 -33.95143,0 z"
+       copytype="repeated"
+       prop_scale="1"
+       scale_y_rel="false"
+       spacing="0"
+       normal_offset="0"
+       tang_offset="0"
+       prop_units="false"
+       vertical_pattern="false"
+       fuse_tolerance="0" />
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect3853"
+       is_visible="true"
+       pattern="m 33.734978,-2.4227104 1,0"
+       copytype="single_stretched"
+       prop_scale="1"
+       scale_y_rel="false"
+       spacing="0"
+       normal_offset="0"
+       tang_offset="0"
+       prop_units="false"
+       vertical_pattern="false"
+       fuse_tolerance="0" />
+    <inkscape:perspective
+       id="perspective2497"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.3020868"
+     inkscape:cx="-43.431158"
+     inkscape:cy="108.37235"
+     inkscape:document-units="in"
+     inkscape:current-layer="layer1-4"
+     showgrid="false"
+     units="in"
+     inkscape:window-width="1920"
+     inkscape:window-height="975"
+     inkscape:window-x="1918"
+     inkscape:window-y="23"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-876.85975)">
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.99418603999999999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="rect2985"
+       width="170.00581"
+       height="170.00581"
+       x="2.7470932"
+       y="879.60681"
+       ry="8.5102367" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffffff;stroke:#000000;stroke-opacity:1"
+       id="path2989"
+       sodipodi:cx="-34.797413"
+       sodipodi:cy="48.224678"
+       sodipodi:rx="6.051724"
+       sodipodi:ry="4.917026"
+       d="m -28.745689,48.224678 c 0,2.715599 -2.709449,4.917026 -6.051724,4.917026 -3.342275,0 -6.051724,-2.201427 -6.051724,-4.917026 0,-2.715598 2.709449,-4.917026 6.051724,-4.917026 3.342275,0 6.051724,2.201428 6.051724,4.917026 z"
+       transform="matrix(0.92948721,0,0,1.1439842,50.34375,839.69148)" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffffff;stroke:#000000;stroke-opacity:1"
+       id="path2989-1"
+       sodipodi:cx="-34.797413"
+       sodipodi:cy="48.224678"
+       sodipodi:rx="6.051724"
+       sodipodi:ry="4.917026"
+       d="m -28.745689,48.224678 c 0,2.715599 -2.709449,4.917026 -6.051724,4.917026 -3.342275,0 -6.051724,-2.201427 -6.051724,-4.917026 0,-2.715598 2.709449,-4.917026 6.051724,-4.917026 3.342275,0 6.051724,2.201428 6.051724,4.917026 z"
+       transform="matrix(0.92948721,0,0,1.1439842,189.84375,839.69148)" />
+    <g
+       transform="translate(-422.65158,512.76917)"
+       id="layer1-4"
+       inkscape:label="Layer 1">
+      <path
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="C:\Documents and Settings\XP\My Documents\NEWellie\Christmas\Christmas Set\Candycane.png"
+         sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccc"
+         d="m 511.21867,426.43733 c 10.62905,9.27895 25.95867,-12.71036 16.27481,-21.08661 l -23.1899,-20.74347 c -32.86506,-28.12742 -74.10815,35.38923 -45.51648,60.35356 l 93.30933,84.64775 c 8.83586,8.02669 26.90312,-15.52144 17.24965,-24.03361 l -70.14039,-62.74104 c -10.99963,-9.5671 -24.28439,-19.21265 -18.56997,-27.10262 6.95851,-9.60573 12.22213,-5.57961 30.58293,10.70605 z m 30.80058,88.32864 9.32614,8.34228 15.01187,-13.36915 -9.58655,-8.57525 -14.75145,13.60211 z m -19.68111,-17.60483 9.63559,8.61915 15.01185,-13.36915 -9.89602,-8.85213 -14.75142,13.60213 z m -19.69042,-17.61318 9.63558,8.61916 15.01187,-13.36916 -9.89597,-8.85209 -14.75148,13.60209 z m -19.44485,-17.39355 9.63559,8.61918 15.01188,-13.3692 -9.89609,-8.85198 -14.75146,13.60212 z m -26.1122,-26.32961 c 3.13365,4.61914 8.19716,9.02731 12.15705,12.49525 l 15.24488,-12.69609 -7.57928,-6.98399 -19.82268,7.18488 z m 4.85898,-37.90142 c -4.00207,4.54697 -5.52159,9.28511 -6.22006,13.20786 l 18.80254,7.95385 c -0.0122,-2.91646 0.931,-5.64529 3.71779,-7.47604 l -16.30027,-13.68567 z m 37.00334,12.02713 9.52823,8.75192 14.44874,-12.65822 -9.78582,-8.98846 -14.19117,12.89479 z m -13.19305,-5.27679 c 2.02076,-0.78017 3.84599,-2.03425 6.6091,-1.01516 l 3.14515,-18.85729 c -7.8957,-3.11289 -13.54025,-1.51869 -18.4448,1.62291 l 8.69055,18.24954 z"
+         style="fill:#000000;fill-rule:evenodd;stroke:none"
+         id="path3405"
+         inkscape:connector-curvature="0" />
+    </g>
+  </g>
+</svg>

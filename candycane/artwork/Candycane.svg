@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="57.321339"
+   height="102.76247"
+   id="svg2489"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   version="1.0"
+   sodipodi:docname="Candycane.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <defs
+     id="defs2491">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective2497" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8"
+     inkscape:cx="55.500346"
+     inkscape:cy="49.157341"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1024"
+     inkscape:window-height="708"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4" />
+  <metadata
+     id="metadata2494">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-331.33933,-400.98094)">
+    <path
+       id="path3405"
+       style="fill:#ef2929;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 368.70087,439.80223 C 368.87531,448.67147 385.28088,448.31101 385.08651,440.25931 L 384.93386,420.72327 C 384.13726,393.50893 338.00997,396.09847 338.47727,419.95795 L 338.55169,499.00476 C 338.55374,506.49414 356.80754,506.94983 356.68786,498.86308 L 356.22619,439.77415 C 356.02949,430.60884 354.9201,420.24929 360.8954,420.22907 C 368.17069,420.20512 368.5169,424.38577 368.70087,439.80223 z M 341.14715,488.34819 L 341.20854,496.20489 L 353.54546,498.88759 L 353.48235,490.81151 L 341.14715,488.34819 z M 341.01758,471.7681 L 341.08101,479.8855 L 353.41793,482.5682 L 353.3528,474.23139 L 341.01758,471.7681 z M 340.88796,455.18015 L 340.95141,463.29755 L 353.28833,465.98025 L 353.22318,457.64349 L 340.88796,455.18015 z M 340.75997,438.79907 L 340.8234,446.91648 L 353.16034,449.59918 L 353.09519,441.26238 L 340.75997,438.79907 z M 341.94542,415.69607 C 341.13666,419.01123 341.22533,423.23187 341.28529,426.54024 L 353.41155,429.592 L 353.45499,423.13097 L 341.94542,415.69607 z M 361.27159,404.08077 C 357.53379,403.73102 354.73918,404.71805 352.65776,405.82052 L 356.83015,418.36423 C 358.1571,417.27371 359.79477,416.73985 361.78763,417.47995 L 361.27159,404.08077 z M 371.13882,427.41852 L 371.09705,435.53056 L 382.87554,438.19049 L 382.91844,429.85918 L 371.13882,427.41852 z M 368.07231,418.73015 C 369.26741,419.47032 370.59778,419.9346 371.27932,421.72227 L 381.19681,416.31423 C 379.34098,411.13123 376.26989,408.84618 372.7993,407.51376 L 368.07231,418.73015 z"
+       sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccc"
+       inkscape:export-filename="C:\Documents and Settings\XP\My Documents\NEWellie\Christmas\Christmas Set\Candycane.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+  </g>
+</svg>
