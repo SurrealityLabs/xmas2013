@@ -1,6 +1,6 @@
 [Eagle]
 Version="05 12 00"
-Platform="Windows"
+Platform="Mac OS X"
 Serial="6F08A96C5D-LS-WLM-1CP"
 Globals="Globals"
 Desktop="Desktop"
@@ -51,7 +51,7 @@ Sheet=1
 
 [Win_2]
 Type="Library Editor"
-Loc="0 22 1919 1112"
+Loc="0 22 1919 992"
 State=1
 Number=3
 File="C:/Projects/xmas2013/artwork.lbr"
@@ -90,11 +90,11 @@ Layer=21
 
 [Win_3]
 Type="Board Editor"
-Loc="0 22 1919 1112"
+Loc="0 22 1919 992"
 State=1
 Number=2
 File="tree-r1.brd"
-View="-24550 -24550 519910 519910"
+View="37178 -116084 415276 262014"
 WireWidths=" 0 2540 3048 6096 8128 10160 12700 14224 16764 17780 19304 21844 25400 38100 64516 4064"
 PadDiameters=" 2540 3048 4064 6096 8128 10160 12700 14224 16764 17780 19304 21844 25400 38100 64516 0"
 PadDrills=" 5000 6000 7000 9000 10000 11000 12000 13000 14000 15000 16000 20000 22000 28000 32000 8000"
@@ -129,7 +129,7 @@ Layer=16
 
 [Win_4]
 Type="Control Panel"
-Loc="0 22 1919 1112"
+Loc="0 22 1919 992"
 State=1
 Number=0
 
