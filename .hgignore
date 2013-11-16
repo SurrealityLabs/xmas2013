@@ -26,3 +26,5 @@ glob:**.l\#6
 glob:**.l\#7
 glob:**.l\#8
 glob:**.l\#9
+glob:*.o
+glob:*.elf
