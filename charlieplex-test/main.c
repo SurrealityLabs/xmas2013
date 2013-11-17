@@ -11,7 +11,6 @@
 
 volatile uint8_t charlieArray[20];
 volatile uint16_t frameCount = 0;
-volatile uint8_t currentLED = 0;
 
 inline void writeCharlieplexLED(void);
 
@@ -43,12 +42,14 @@ int main(void) {
         for(i=0; i<20; i++) {
             charlieArray[i] = 1;
             frameCount = 0;
+            TCNT1 = 0;
             while(frameCount < 1000);
         }
 
         for(i=20; i>0; i--) {
             charlieArray[20-i] = 0;
             frameCount = 0;
+            TCNT1 = 0;
             while(frameCount < 1000);
         }
     }
@@ -64,7 +65,9 @@ ISR(TIM1_OVF_vect) {
     frameCount++;
 }
 
-void writeCharlieplexLED(void) {
+inline void writeCharlieplexLED(void) {
+    static uint8_t currentLED = 0;
+
     DDRB = 0b00000000;
     PORTB = 0b00000000;
     switch(currentLED) {
