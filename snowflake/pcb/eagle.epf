@@ -1,6 +1,6 @@
 [Eagle]
 Version="05 12 00"
-Platform="Windows"
+Platform="Mac OS X"
 Serial="6F08A96C5D-LS-WLM-1CP"
 Globals="Globals"
 Desktop="Desktop"
@@ -10,7 +10,7 @@ AutoSaveProject=1
 
 [Win_1]
 Type="Schematic Editor"
-Loc="0 22 1919 1112"
+Loc="0 22 1919 1113"
 State=1
 Number=1
 File="snowflake-r2.sch"
@@ -50,12 +50,20 @@ Views=" 1: 801395 379332 2307315 1502072"
 Sheet=1
 
 [Win_2]
+Type="CAM Processor"
+Loc="652 236 1293 779"
+State=2
+Number=3
+File="snowflake-r2.brd"
+Job="/Users/picxpert/Projects/EagleStuff/cam/Seeed_Gerber_Generater_2-layer.cam"
+
+[Win_3]
 Type="Board Editor"
-Loc="0 22 1919 993"
+Loc="0 22 1919 1113"
 State=1
 Number=2
 File="snowflake-r2.brd"
-View="36464 -3494 255270 215312"
+View="152499 -173283 936523 610741"
 WireWidths=" 0 2540 4064"
 PadDiameters=" 2540 3048 4064 6096 8128 10160 12700 14224 16764 17780 19304 21844 25400 38100 64516 0"
 PadDrills=" 6000 7000 9000 10000 11000 12000 13000 14000 15000 16000 20000 22000 28000 32000 8000 5000"
@@ -88,7 +96,7 @@ AddLevel=2
 PadsSameType=0
 Layer=16
 
-[Win_3]
+[Win_4]
 Type="Control Panel"
 Loc="0 22 1919 996"
 State=2
@@ -99,3 +107,4 @@ Screen="1920 1200"
 Window="Win_1"
 Window="Win_2"
 Window="Win_3"
+Window="Win_4"

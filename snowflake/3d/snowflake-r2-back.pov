@@ -56,7 +56,7 @@
 
 #local pcb_rotate_x = 0;
 #local pcb_rotate_y = 0;
-#local pcb_rotate_z = 0;
+#local pcb_rotate_z = 180;
 
 #local pcb_board = on;
 #local pcb_parts = on;
@@ -98,7 +98,7 @@
 #declare pcb_layer1_used = 1;
 #declare pcb_layer16_used = 1;
 #declare inc_testmode = off;
-#declare global_seed=seed(237);
+#declare global_seed=seed(335);
 #declare global_pcb_layer_dis = array[16]
 {
 	0.000000,

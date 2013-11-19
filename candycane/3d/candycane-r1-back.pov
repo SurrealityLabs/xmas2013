@@ -56,7 +56,7 @@
 
 #local pcb_rotate_x = 0;
 #local pcb_rotate_y = 0;
-#local pcb_rotate_z = 0;
+#local pcb_rotate_z = 180;
 
 #local pcb_board = on;
 #local pcb_parts = on;
@@ -98,7 +98,7 @@
 #declare pcb_layer1_used = 1;
 #declare pcb_layer16_used = 1;
 #declare inc_testmode = off;
-#declare global_seed=seed(847);
+#declare global_seed=seed(983);
 #declare global_pcb_layer_dis = array[16]
 {
 	0.000000,
@@ -275,6 +275,7 @@ cylinder{<44.450000,1,44.450000><44.450000,-5,44.450000>1.200000 texture{col_hls
 #end
 #if(pcb_parts=on)//Parts
 union{
+//MPD-File
 #ifndef(pack_C1) #declare global_pack_C1=yes; object {CAP_DIS_CERAMIC_50MM_76MM("100n",)translate<0,-0,0> rotate<0,0.000000,0>rotate<0,-180.000000,0> rotate<0,0,180> translate<5.080000,-1.500000,17.780000>}#end		//ceramic disc capacitator C1 100n C050-025X075
 #ifndef(pack_IC1) #declare global_pack_IC1=yes; object {IC_DIS_DIP8("ATTINY25-20PU","ATMEL",)translate<0,-0,0> rotate<0,0.000000,0>rotate<0,-270.000000,0> rotate<0,0,180> translate<6.350000,-1.500000,6.350000>translate<0,-3.000000,0> }#end		//DIP8 IC1 ATTINY25-20PU DIL08
 #ifndef(pack_IC1) object{SOCKET_DIP8()rotate<0,-270.000000,0> rotate<0,0,180> translate<6.350000,-1.500000,6.350000>}#end					//IC-Sockel 8Pin IC1 ATTINY25-20PU

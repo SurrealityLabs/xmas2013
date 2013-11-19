@@ -1,6 +1,6 @@
 [Eagle]
 Version="05 12 00"
-Platform="Windows"
+Platform="Mac OS X"
 Serial="6F08A96C5D-LS-WLM-1CP"
 Globals="Globals"
 Desktop="Desktop"
@@ -10,7 +10,7 @@ AutoSaveProject=1
 
 [Win_1]
 Type="Schematic Editor"
-Loc="0 22 1919 992"
+Loc="0 22 1919 1113"
 State=1
 Number=1
 File="snowman-r1.sch"
@@ -50,8 +50,16 @@ Views=" 1: 227060 11064 1096936 659732"
 Sheet=1
 
 [Win_2]
+Type="CAM Processor"
+Loc="652 236 1293 779"
+State=2
+Number=3
+File="snowman-r1.brd"
+Job="/Users/picxpert/Projects/EagleStuff/cam/Seeed_Gerber_Generater_2-layer.cam"
+
+[Win_3]
 Type="Board Editor"
-Loc="0 22 1919 992"
+Loc="0 22 1919 1113"
 State=1
 Number=2
 File="snowman-r1.brd"
@@ -88,7 +96,7 @@ AddLevel=2
 PadsSameType=0
 Layer=1
 
-[Win_3]
+[Win_4]
 Type="Control Panel"
 Loc="0 22 1919 996"
 State=2
@@ -99,3 +107,4 @@ Screen="1920 1200"
 Window="Win_1"
 Window="Win_2"
 Window="Win_3"
+Window="Win_4"
