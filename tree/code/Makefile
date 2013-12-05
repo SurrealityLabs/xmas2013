@@ -17,7 +17,11 @@
 DEVICE     = attiny25
 CLOCK      = 8000000
 PROGRAMMER = -c usbtiny
-OBJECTS    = main.o
+OBJECTS    = main.o debounce.o charlieplex.o xmas_common.o
+CHRISTMAS-TREE-OBJECTS = christmas_tree.o
+SNOWMAN-OBJECTS = snowman.o
+SNOWFLAKE-OBJECTS = snowflake.o
+CANDYCANE-OBJECTS = candycane.o
 FUSES	   = -U lfuse:w:0xe2:m -U hfuse:w:0x5f:m -U efuse:w:0xff:m
 
 # Tune the lines below only if you know what you are doing:
@@ -26,7 +30,7 @@ AVRDUDE = avrdude $(PROGRAMMER) -p $(DEVICE) -B 10 -F
 COMPILE = avr-gcc -Wall -Os -DF_CPU=$(CLOCK) -mmcu=$(DEVICE)
 
 # symbolic targets:
-all:	christmas-tree.hex	size
+all:	christmas-tree.hex	christmas-tree-size  snowman.hex  snowman-size  snowflake.hex  snowflake-size  candycane.hex  candycane-size
 
 main.o:
 
@@ -43,15 +47,33 @@ main.o:
 .c.s:
 	$(COMPILE) -S $< -o $@
 
-flash:	all
+christmas-tree-flash:	christmas-tree.hex  christmas-tree-size
 	$(AVRDUDE) -U flash:w:christmas-tree.hex:i
+
+snowman-flash:   snowman.hex snowman-size
+	$(AVRDUDE) -U flash:w:snowman.hex:i
+
+snowflake-flash:   snowflake.hex snowflake-size
+	$(AVRDUDE) -U flash:w:snowflake.hex:i
+
+candycane-flash:   candycane.hex candycane-size
+	$(AVRDUDE) -U flash:w:candycane.hex:i
 
 fuse:
 	$(AVRDUDE) $(FUSES)
 
-size:	christmas-tree.elf
+christmas-tree-size:	christmas-tree.elf
 	avr-size --mcu=$(DEVICE) --format=avr christmas-tree.elf
 	
+snowman-size:	snowman.elf
+	avr-size --mcu=$(DEVICE) --format=avr snowman.elf
+
+snowflake-size:	snowflake.elf
+	avr-size --mcu=$(DEVICE) --format=avr snowflake.elf
+
+candycane-size:	candycane.elf
+	avr-size --mcu=$(DEVICE) --format=avr candycane.elf
+
 ident:
 	$(AVRDUDE)
 
@@ -63,15 +85,40 @@ load: all
 	bootloadHID christmas-tree.hex
 
 clean:
-	rm -f christmas-tree.hex christmas-tree.elf $(OBJECTS)
+	rm -f $(OBJECTS)
+	rm -f christmas-tree.hex christmas-tree.elf $(CHRISTMAS-TREE-OBJECTS)
+	rm -f snowman.hex snowman.elf $(SNOWMAN-OBJECTS)
+	rm -f snowflake.hex snowflake.elf $(SNOWFLAKE-OBJECTS)
+	rm -f candycane.hex candycane.elf $(CANDYCANE-OBJECTS)
 
 # file targets:
-christmas-tree.elf: $(OBJECTS)
-	$(COMPILE) -o christmas-tree.elf $(OBJECTS)
+christmas-tree.elf: $(OBJECTS) $(CHRISTMAS-TREE-OBJECTS)
+	$(COMPILE) -o christmas-tree.elf $(OBJECTS) $(CHRISTMAS-TREE-OBJECTS)
+
+snowman.elf: $(OBJECTS) $(SNOWMAN-OBJECTS)
+	$(COMPILE) -o snowman.elf $(OBJECTS) $(SNOWMAN-OBJECTS)
+
+snowflake.elf: $(OBJECTS) $(SNOWFLAKE-OBJECTS)
+	$(COMPILE) -o snowflake.elf $(OBJECTS) $(SNOWFLAKE-OBJECTS)
+
+candycane.elf: $(OBJECTS) $(CANDYCANE-OBJECTS)
+	$(COMPILE) -o candycane.elf $(OBJECTS) $(CANDYCANE-OBJECTS)
 
 christmas-tree.hex: christmas-tree.elf
 	rm -f christmas-tree.hex
 	avr-objcopy -j .text -j .data -O ihex christmas-tree.elf christmas-tree.hex
+
+snowman.hex: snowman.elf
+	rm -f snowman.hex
+	avr-objcopy -j .text -j .data -O ihex snowman.elf snowman.hex
+
+snowflake.hex: snowflake.elf
+	rm -f snowflake.hex
+	avr-objcopy -j .text -j .data -O ihex snowflake.elf snowflake.hex
+
+candycane.hex: candycane.elf
+	rm -f candycane.hex
+	avr-objcopy -j .text -j .data -O ihex candycane.elf candycane.hex
 # If you have an EEPROM section, you must also create a hex file for the
 # EEPROM and add it to the "flash" target.
 
