@@ -71,52 +71,24 @@ void candycaneMarquee(uint16_t marqueeInterval) {
 void candycaneFillShort(uint16_t fillInterval) {
     cli();
     setAll(0);
-    
-    switch(frameCount / fillInterval) {
-        case 23:
-        case 22:
-        case 21:
-        case 20:
-        case 19:
-        case 18:
-        case 17:
-        case 16:
-        case 15:
-            charlieArray[15] = 1;
-        case 14:
-            charlieArray[14] = 1;
-        case 13:
-            charlieArray[13] = 1;
-        case 12:
-            charlieArray[12] = 1;
-        case 11:
-            charlieArray[11] = 1;
-        case 10:
-            charlieArray[10] = 1;
-        case 9:
-            charlieArray[9] = 1;
-        case 8:
-            charlieArray[8] = 1;
-        case 7:
-            charlieArray[7] = 1;
-        case 6:
-            charlieArray[6] = 1;
-        case 5:
-            charlieArray[5] = 1;
-        case 4:
-            charlieArray[4] = 1;
-        case 3:
-            charlieArray[3] = 1;
-        case 2:
-            charlieArray[2] = 1;
-        case 1:
-            charlieArray[1] = 1;
-        case 0:
-            charlieArray[0] = 1;
-            break;
-        default:
-            frameCount = 0;
+
+    uint8_t maxCount, i;
+    uint16_t temp;
+
+    temp = frameCount / fillInterval;
+    if(temp > 23) {
+        frameCount = 0;
+        maxCount = 16;
+    } else if(temp > 15) {
+        maxCount = 16;
+    } else {
+        maxCount = temp;
     }
+
+    for(i = 0; i < maxCount; i++) {
+        charlieArray[i] = 1;
+    }
+    
     sei();
 }
 
