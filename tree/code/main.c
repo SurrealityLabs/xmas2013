@@ -87,6 +87,7 @@ void doSleep() {
 }
 
 
+void setAll(uint8_t state);
 void allOff(void);
 void allOn(void);
 void allBlink(uint16_t blinkInterval);
@@ -98,45 +99,42 @@ void treeMarquee(uint16_t marqueeInterval);
 void treeRightFill(uint16_t fillInterval);
 void treeBottomFill(uint16_t fillInterval);
 
-void resetCharlieplex(void) {
+void setAll(uint8_t state) {
     uint8_t i = 0;
     for(i=0; i<20; i++) {
-        charlieArray[i] = 0;
+        charlieArray[i] = state;
     }
 }
 
 void allOff(void) {
-    resetCharlieplex();
+    cli();
+    setAll(0);
     frameCount = 0;
+    sei();
 }
 
 void allOn(void) {
-    uint8_t i = 0;
-
-    for(i=0; i<20; i++) {
-        charlieArray[i] = 1;
-    }
+    cli();
+    setAll(1);
     frameCount = 0;
+    sei();
 }
 
 void allBlink(uint16_t blinkInterval) {
-    uint8_t i = 0;
+    cli();
     if(frameCount >= (2 * blinkInterval)) {
         frameCount = 0;
     } else if(frameCount >= blinkInterval) {
-        for(i=0; i<20; i++) {
-            charlieArray[i] = 1;
-        }
+        setAll(1);
     } else {
-        for(i=0; i<20; i++) {
-           charlieArray[i] = 0;
-        }
+        setAll(0);
     }
+    sei();
 }
 
 void allTwinkle(uint16_t twinkleInterval, uint16_t randomThreshold) {
     uint8_t i = 0;
-
+    cli();
     if(frameCount >= twinkleInterval) {
         frameCount = 0;
 
@@ -150,6 +148,7 @@ void allTwinkle(uint16_t twinkleInterval, uint16_t randomThreshold) {
             }
         }
     }
+    sei();
 }
 
 uint16_t getRandom() {
@@ -161,27 +160,15 @@ uint16_t getRandom() {
 }
 
 void treeTwinkle(uint16_t twinkleInterval, uint16_t randomThreshold) {
-    uint8_t i = 0;
-
+    cli();
+    allTwinkle(twinkleInterval, randomThreshold);
     charlieArray[0] = 1;
-
-    if(frameCount >= twinkleInterval) {
-        frameCount = 0;
-
-        for(i=1; i<20; i++) {
-            if(getRandom() > randomThreshold) {
-                if(charlieArray[i] == 1) {
-                    charlieArray[i] = 0;
-                } else {
-                    charlieArray[i] = 1;
-                }
-            }
-        }
-    }
+    sei();
 }
 
 void treeMarquee(uint16_t marqueeInterval) {
-    resetCharlieplex();
+    cli();
+    setAll(0);
 
     charlieArray[0] = 1;
 
@@ -206,45 +193,52 @@ void treeMarquee(uint16_t marqueeInterval) {
         charlieArray[10] = 1;
         charlieArray[13] = 1;
     }
+    sei();
 }
 
 void treeRightFill(uint16_t fillInterval) {
-    resetCharlieplex();
+    cli();
+    setAll(0);
     
     charlieArray[0] = 1;
 
     switch(frameCount / fillInterval) {
-        case 5:
+        case 10:
+        case 9:
+        case 8:
+        case 7:
+        case 6:
             charlieArray[15] = 1;
-        case 4:
+        case 5:
             charlieArray[14] = 1;
             charlieArray[9] = 1;
-        case 3:
+        case 4:
             charlieArray[13] = 1;
             charlieArray[8] = 1;
             charlieArray[4] = 1;
-        case 2:
+        case 3:
             charlieArray[12] = 1;
             charlieArray[7] = 1;
             charlieArray[3] = 1;
-        case 1:
+        case 2:
             charlieArray[11] = 1;
             charlieArray[6] = 1;
             charlieArray[2] = 1;
-        case 0:
+        case 1:
             charlieArray[10] = 1;
             charlieArray[5] = 1;
             charlieArray[1] = 1;
+        case 0:
             break;
         default:
             frameCount = 0;
     }
+    sei();
 }
 
 void treeBottomFill(uint16_t fillInterval) {
-    resetCharlieplex();
-
-    charlieArray[0] = 1;
+    cli();
+    setAll(1);
 
     switch(frameCount / fillInterval) {
         case 0:
@@ -277,10 +271,20 @@ void treeBottomFill(uint16_t fillInterval) {
             charlieArray[2] = 0;
         case 14:
             charlieArray[1] = 0;
+        case 15:
+        case 16:
+        case 17:
+        case 18:
+        case 19:
+        case 20:
+        case 21:
+        case 22:
+        case 23:
             break;
         default:
             frameCount = 0;
     }
+    sei();
 }
 
 int main(void) {
@@ -304,44 +308,50 @@ int main(void) {
     TIMSK = (0 << OCIE1A) | (0 << OCIE1B) | (1 << OCIE0A) | (0 << OCIE0B) | (1 << TOIE1) | (0 << TOIE0);
     sei();
 
-    uint8_t mode = 4;
+    uint8_t mode = 1;
+    uint16_t lastFrameCount = 0;
 
-    resetCharlieplex();
+    setAll(0);
     
     while(1) {
-        switch(mode) {
-            case 0:
-                allOff();
-                if(debounceState == DEBOUNCE_IDLE) doSleep();
-                break;
-            case 1:
-                allOn();
-                break;
-            case 2:
-                allBlink(500);
-                break;
-            case 3:
-                treeMarquee(500);
-                break;
-            case 4:
-                treeRightFill(500);
-                break;
-            case 5:
-                treeBottomFill(500);
-                break;
-            case 6:
-                allTwinkle(500, 40000);
-                break;
-            case 7:
-                treeTwinkle(500, 40000);
-                break;
-            default:
-                mode = 0;
-                break;
-        }
-        if(debounceButton()) {
-            mode++;
-            mode %= 8;
+        if(lastFrameCount != frameCount) {
+            switch(mode) {
+                case 0:
+                    allOff();
+                    PORTB &= 0b11100000;
+                    if(debounceState == DEBOUNCE_IDLE) doSleep();
+                    break;
+                case 1:
+                    allOn();
+                    break;
+                case 2:
+                    allBlink(750);
+                    break;
+                case 3:
+                    treeMarquee(500);
+                    break;
+                case 4:
+                    treeRightFill(500);
+                    break;
+                case 5:
+                    treeBottomFill(300);
+                    break;
+                case 6:
+                    allTwinkle(500, 40000);
+                    break;
+                case 7:
+                    treeTwinkle(500, 40000);
+                    break;
+                default:
+                    mode = 0;
+                    break;
+            }
+            lastFrameCount = frameCount;
+            if(debounceButton()) {
+                mode++;
+                mode %= 8;
+                frameCount = 0;
+            }
         }
     }
 
@@ -354,6 +364,7 @@ ISR(TIM0_COMPA_vect) {
 
 ISR(TIM1_OVF_vect) {
     frameCount++;
+    debounceCount++;
 }
 
 ISR(PCINT0_vect) {

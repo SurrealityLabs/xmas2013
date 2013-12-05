@@ -18,7 +18,7 @@ DEVICE     = attiny25
 CLOCK      = 8000000
 PROGRAMMER = -c usbtiny
 OBJECTS    = main.o
-FUSES	   = -U lfuse:w:0xe2:m -U hfuse:w:0xdf:m -U efuse:w:0xff:m
+FUSES	   = -U lfuse:w:0xe2:m -U hfuse:w:0x5f:m -U efuse:w:0xff:m
 
 # Tune the lines below only if you know what you are doing:
 
