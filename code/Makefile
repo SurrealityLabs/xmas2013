@@ -1,7 +1,7 @@
 # Name: Makefile
-# Author: <insert your name here>
-# Copyright: <insert your copyright message here>
-# License: <insert your license reference here>
+# Author: Randy Glenn <randy@surrealitylabs.com
+# Copyright: 2013. All rights reserved.
+# License: GPL 3.0
 
 # This is a prototype Makefile. Modify it according to your needs.
 # You should at least check the settings for
@@ -17,6 +17,8 @@
 DEVICE     = attiny25
 CLOCK      = 8000000
 PROGRAMMER = -c usbtiny
+PROGRAMMER_PI = -c linuxspi -P /dev/spidev0.0
+BATCH_MODE ?= nonbatch
 OBJECTS    = main.o debounce.o charlieplex.o xmas_common.o
 CHRISTMAS-TREE-OBJECTS = christmas_tree.o
 SNOWMAN-OBJECTS = snowman.o
@@ -24,9 +26,11 @@ SNOWFLAKE-OBJECTS = snowflake.o
 CANDYCANE-OBJECTS = candycane.o
 FUSES	   = -U lfuse:w:0xe2:m -U hfuse:w:0x5f:m -U efuse:w:0xff:m
 
-# Tune the lines below only if you know what you are doing:
-
-AVRDUDE = avrdude $(PROGRAMMER) -p $(DEVICE) -B 10 -F
+ifeq ($(BATCH_MODE),pigrammer)
+	AVRDUDE = avrdude $(PROGRAMMER_PI) -p $(DEVICE) -B 10 -F
+else
+	AVRDUDE = avrdude $(PROGRAMMER) -p $(DEVICE) -B 10 -F
+endif
 COMPILE = avr-gcc -Wall -Os -DF_CPU=$(CLOCK) -mmcu=$(DEVICE)
 
 # symbolic targets:
@@ -77,13 +81,6 @@ candycane-size:	candycane.elf
 ident:
 	$(AVRDUDE)
 
-# Xcode uses the Makefile targets "", "clean" and "install"
-install: flash fuse
-
-# if you use a bootloader, change the command below appropriately:
-load: all
-	bootloadHID christmas-tree.hex
-
 clean:
 	rm -f $(OBJECTS)
 	rm -f christmas-tree.hex christmas-tree.elf $(CHRISTMAS-TREE-OBJECTS)
@@ -119,12 +116,3 @@ snowflake.hex: snowflake.elf
 candycane.hex: candycane.elf
 	rm -f candycane.hex
 	avr-objcopy -j .text -j .data -O ihex candycane.elf candycane.hex
-# If you have an EEPROM section, you must also create a hex file for the
-# EEPROM and add it to the "flash" target.
-
-# Targets for code debugging and analysis:
-disasm:	christmas-tree.elf
-	avr-objdump -d christmas-tree.elf
-
-cpp:
-	$(COMPILE) -E main.c
