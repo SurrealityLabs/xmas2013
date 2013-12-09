@@ -67,16 +67,24 @@ fuse:
 	$(AVRDUDE) $(FUSES)
 
 christmas-tree-size:	christmas-tree.elf
+ifneq ($(BATCH_MODE), pigrammer)
 	avr-size --mcu=$(DEVICE) --format=avr christmas-tree.elf
-	
+endif
+
 snowman-size:	snowman.elf
+ifneq ($(BATCH_MODE), pigrammer)
 	avr-size --mcu=$(DEVICE) --format=avr snowman.elf
+endif
 
 snowflake-size:	snowflake.elf
+ifneq ($(BATCH_MODE), pigrammer)
 	avr-size --mcu=$(DEVICE) --format=avr snowflake.elf
+endif
 
 candycane-size:	candycane.elf
+ifneq ($(BATCH_MODE), pigrammer)
 	avr-size --mcu=$(DEVICE) --format=avr candycane.elf
+endif
 
 ident:
 	$(AVRDUDE)
