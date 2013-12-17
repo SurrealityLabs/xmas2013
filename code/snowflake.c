@@ -62,6 +62,10 @@ void snowflakeStarburst(uint16_t fillInterval) {
     setAll(0);
     
     switch(frameCount / fillInterval) {
+        case 11:
+        case 10:
+        case 9:
+        case 8:
         case 7:
         case 6:
         case 5:
@@ -134,6 +138,10 @@ void snowflakeSpiralFill(uint16_t fillInterval) {
     setAll(0);
     
     switch(frameCount / fillInterval) {
+        case 15:
+        case 14:
+        case 13:
+        case 12:
         case 11:
         case 10:
         case 9:
@@ -189,10 +197,10 @@ void xmasModeSwitcher(uint8_t mode) {
             snowflakeAlternate(750);
             break;
         case 4:
-            snowflakeStarburst(500);
+            snowflakeStarburst(250);
             break;
         case 5:
-            snowflakeSpiralFill(500);
+            snowflakeSpiralFill(250);
             break;
         case 6:
             snowflakePinwheel(500);
