@@ -92,7 +92,7 @@ void candycaneFillShort(uint16_t fillInterval) {
     uint16_t temp;
 
     temp = frameCount / fillInterval;
-    if(temp > 23) {
+    if(temp > 31) {
         frameCount = 0;
         maxCount = 16;
     } else if(temp > 15) {
@@ -153,6 +153,14 @@ void candycaneFillLong(uint16_t fillInterval) {
         case 21:
         case 22:
         case 23:
+        case 24:
+        case 25:
+        case 26:
+        case 27:
+        case 28:
+        case 29:
+        case 30:
+        case 31:
             break;
         default:
             frameCount = 0;
@@ -178,16 +186,16 @@ void xmasModeSwitcher(uint8_t mode) {
             candycaneAlternate(750);
             break;
         case 4:
-            candycaneFillShort(500);
+            candycaneFillShort(250);
             break;
         case 5:
             candycaneMarquee(500);
             break;
         case 6:
-            allTwinkle(500, 40000);
+            allTwinkle(300, 40000);
             break;
         case 7:
-            candycaneFillLong(500);
+            candycaneFillLong(250);
             break;
         default:
             mode = 0;
